@@ -3,9 +3,10 @@ package com.example.pecanecommerce.Services;
 import com.example.pecanecommerce.Models.Product;
 import com.example.pecanecommerce.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-
+@Service
 public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository productRepository;
