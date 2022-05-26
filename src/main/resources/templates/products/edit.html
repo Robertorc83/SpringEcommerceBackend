@@ -40,7 +40,7 @@
 
     <h2>Update Product</h2>
     <form class="form-horizontal" th:action="@{/products/update}" method="post"  enctype="multipart/form-data">
-        <input type="hidden" name="id" th:value="${product.id}">
+        <input type="hidden" name="id" value="${product.id}">
 
         <div class="form-group">
             <label class="control-label col-sm-2" for="name">Name:</label>

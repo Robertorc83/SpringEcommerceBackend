@@ -21,6 +21,7 @@ import javax.persistence.Table;
         private String email;
         private String address;
         private String phone;
+        private String type;
         private String password;
 
         @OneToMany(mappedBy = "user")
@@ -33,8 +34,18 @@ import javax.persistence.Table;
 
         @Override
         public String toString() {
-            return "User [id=" + id + ", name=" + name + ", username=" + username + ", email=" + email + ", address="
-                    + address + ", phone=" + phone + ", password=" + password + "]";
+            return "User{" +
+                    "id=" + id +
+                    ", name='" + name + '\'' +
+                    ", username='" + username + '\'' +
+                    ", email='" + email + '\'' +
+                    ", address='" + address + '\'' +
+                    ", phone='" + phone + '\'' +
+                    ", type='" + type + '\'' +
+                    ", password='" + password + '\'' +
+                    ", products=" + products +
+                    ", orders=" + orders +
+                    '}';
         }
 
         public User(Integer id, String name, String username, String email, String address, String phone, String password) {
@@ -46,6 +57,14 @@ import javax.persistence.Table;
             this.address = address;
             this.phone = phone;
             this.password = password;
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public void setType(String type) {
+            this.type = type;
         }
 
         public Integer getId() {
